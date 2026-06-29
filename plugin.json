@@ -1,0 +1,9 @@
+{
+  "name": "semco",
+  "version": "0.1.0",
+  "description": "Semco's standard skill pack: the mandated, org-wide skills every Semco machine should have. Currently ships the code-commenter skills; more Semco skills get added here over time.",
+  "author": {
+    "name": "Semco"
+  },
+  "keywords": ["semco", "standards", "internal", "comments", "documentation"]
+}

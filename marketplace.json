@@ -1,0 +1,11 @@
+{
+  "name": "semco",
+  "owner": { "name": "Semco" },
+  "plugins": [
+    {
+      "name": "semco",
+      "source": "./Semco-plugin",
+      "description": "Semco's standard, org-wide skill pack."
+    }
+  ]
+}
