@@ -18,6 +18,8 @@ semco-marketplace/                 ← the repo you push to GitHub (the marketpl
         ├── code-commenter-full/
         │   └── SKILL.md
         └── code-commenter-light/
+        │   └── SKILL.md
+        └── mstest-unit-tests/
             └── SKILL.md
 ```
 
