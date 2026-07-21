@@ -21,6 +21,7 @@ mandated, org-wide skills that ship to every Semco machine.
     └── skills/                 ← one folder per skill
         ├── code-commenter-full/
         └── code-commenter-light/
+        └── mstest-unit-tests/
 ```
 
 ## Adding a new Semco skill
