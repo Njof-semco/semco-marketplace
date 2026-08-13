@@ -232,3 +232,36 @@ Flag them briefly, one line per test, with the tradeoff. For example:
 Keeping borderline tests in the code (rather than leaving them out and asking) means the user can accept by doing nothing, which is the common case. Do not flag more than a handful; if everything feels borderline, the behaviour analysis in step 2 was too shallow, redo it.
 
 If the class under test has no logic (pure DTOs, records, empty wrappers), say so and do not generate tests for it. An honest "this does not need unit tests" is better output than filler tests.
+
+## Don't rewrite logic
+
+
+When a test fails, assume the production code is wrong, not the test.
+Editing a test to make it pass is only allowed when the test itself is
+provably wrong.
+
+Never do any of the following without explicit approval from the developer:
+
+- Delete, comment out, or weaken an assertion (for example, replacing a
+  value check with IsNotNull or IsTrue(true))
+- Change an expected value to match the actual output
+- Add [Ignore] or otherwise skip a test
+- Wrap the code under test in try/catch to swallow an exception
+- Mock or stub the class under test so the real logic never runs
+- Remove or narrow cases from a data-driven test
+
+If making a test pass would require any of the above, stop before editing
+and report:
+
+1. Which test, and which change would be needed
+2. Why the test currently fails
+3. Whether the fault looks like a bug in the production code or a wrong test
+
+Start the report with this exact line:
+
+**TEST LOGIC CHANGE, APPROVAL NEEDED**
+
+Then wait for an answer. Do not continue with other work in the same response.
+
+This applies to tests written by the mstest skill, edited by hand, or
+touched as a side effect of another task.
