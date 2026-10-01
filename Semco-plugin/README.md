@@ -14,13 +14,13 @@ semco-marketplace/                 ← the repo you push to GitHub (the marketpl
     ├── .claude-plugin/
     │   └── plugin.json            ← plugin manifest
     ├── README.md
-    └── skills/                    ← one folder per skill
-        ├── code-commenter-full/
-        │   └── SKILL.md
-        └── code-commenter-light/
-        │   └── SKILL.md
-        └── mstest-unit-tests/
-            └── SKILL.md
+    ├── skills/                    ← one folder per skill, all of these are loaded
+    │   ├── code-comments/
+    │   │   ├── SKILL.md
+    │   │   └── references/        ← one example file per language, loaded on demand
+    │   └── mstest-unit-tests/
+    │       └── SKILL.md
+    └── archive/                   ← retired skills, kept for reference, not loaded
 ```
 
 Two layers, two manifests, and they do different jobs:
