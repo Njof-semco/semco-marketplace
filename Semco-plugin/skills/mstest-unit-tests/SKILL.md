@@ -67,7 +67,7 @@ If writing the csproj by hand, this is the minimal shape (adjust `TargetFramewor
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -189,15 +189,15 @@ public class VATServiceTests
         var negativePrice = -1m;
 
         // Act & Assert
-        Assert.ThrowsException<ArgumentException>(
+        Assert.ThrowsExactly<ArgumentException>(
             () => _sut.CalculateVAT(negativePrice, "DK"));
     }
 }
 ```
 
-Note what is NOT tested: that `GetRate` returns 0.25 (that is the mock), that the constructor stores the provider, or a third rate value like 0.19 (same branch as 0.25, adds nothing). Use `Assert.ThrowsExactly` instead of `Assert.ThrowsException` on MSTest 3.8+ if the project already uses it.
+Note what is NOT tested: that `GetRate` returns 0.25 (that is the mock), that the constructor stores the provider, or a third rate value like 0.19 (same branch as 0.25, adds nothing). `Assert.ThrowsExactly` needs MSTest 3.8 or newer. If the test project references an older MSTest version, use `Assert.ThrowsException` instead.
 
-For data-driven cases where multiple inputs DO cover different rules (not just different values), prefer `[DataTestMethod]` with `[DataRow]` over copy-pasted tests.
+For data-driven cases where multiple inputs DO cover different rules (not just different values), prefer `[TestMethod]` with `[DataRow]` over copy-pasted tests. Do not use `[DataTestMethod]`, it is deprecated.
 
 ## Workflow when asked to write tests
 

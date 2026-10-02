@@ -1,7 +1,6 @@
 {
   "name": "semco",
-  "version": "0.2.0",
-  "description": "Semco's standard skill pack: the mandated, org-wide skills every Semco machine should have. Ships the code-comments and mstest-unit-tests skills; more Semco skills get added here over time.",
+  "description": "Semco's standard skill pack: the mandated, org-wide skills every Semco machine should have.",
   "author": {
     "name": "Semco"
   },
