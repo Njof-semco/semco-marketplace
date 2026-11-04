@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: home-screen-new-app
+expected_outcome: |
+  A home screen in the MDT look: marine header with sea-green underline and app title, sea photo background, three clickable cards, the Reports card visibly disabled with a reason, Mantine with the MDT theme.
