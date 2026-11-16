@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "snowflake": {
+      "type": "http",
+      "url": "https://semco-dataandanalytics.snowflakecomputing.com/api/v2/databases/<DATABASE>/schemas/<SCHEMA>/mcp-servers/<SERVER_NAME>",
+      "oauth": {
+        "clientId": "<CLIENT_ID>"
+      }
+    }
+  }
+}

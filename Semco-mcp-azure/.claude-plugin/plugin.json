@@ -1,0 +1,11 @@
+{
+  "name": "semco-azure",
+  "description": "Azure MCP server, runs locally with your az login.",
+  "author": {
+    "name": "Semco"
+  },
+  "keywords": [
+    "semco",
+    "mcp"
+  ]
+}

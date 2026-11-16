@@ -1,0 +1,11 @@
+{
+  "name": "semco-azure-devops",
+  "description": "Azure DevOps MCP server for semcomaritime, read-only.",
+  "author": {
+    "name": "Semco"
+  },
+  "keywords": [
+    "semco",
+    "mcp"
+  ]
+}

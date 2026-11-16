@@ -1,0 +1,11 @@
+{
+  "name": "semco-snowflake",
+  "description": "Snowflake-managed MCP server for semco-dataandanalytics.",
+  "author": {
+    "name": "Semco"
+  },
+  "keywords": [
+    "semco",
+    "mcp"
+  ]
+}

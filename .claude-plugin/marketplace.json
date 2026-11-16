@@ -1,11 +1,28 @@
 {
   "name": "semco",
-  "owner": { "name": "Semco" },
+  "owner": {
+    "name": "Semco"
+  },
   "plugins": [
     {
       "name": "semco",
       "source": "./Semco-plugin",
       "description": "Semco's standard, org-wide skill pack."
+    },
+    {
+      "name": "semco-azure-devops",
+      "source": "./Semco-mcp-azure-devops",
+      "description": "Azure DevOps MCP server for semcomaritime, read-only."
+    },
+    {
+      "name": "semco-azure-devops-write",
+      "source": "./Semco-mcp-azure-devops-write",
+      "description": "Azure DevOps MCP server for semcomaritime, read and write."
+    },
+    {
+      "name": "semco-azure",
+      "source": "./Semco-mcp-azure",
+      "description": "Azure MCP server, runs locally with your az login."
     }
   ]
 }
